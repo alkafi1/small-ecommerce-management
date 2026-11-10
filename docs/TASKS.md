@@ -88,7 +88,7 @@ Target schedule (deadline 11 Nov 2026):
 ## Phase 10 — Submission
 - ✅ 10.1 README.md (PLAN §6), including demo accounts and a feature walkthrough
 - ⬜ 10.2 **Fresh clone test**: clone to a new folder and follow the README word by word with MySQL, then with SQLite
-- ⬜ 10.3 Push to a public GitHub repo and check that nothing (seed images, `.env.example`) is gitignored by mistake
+- ✅ 10.3 Push to a public GitHub repo (https://github.com/alkafi1/small-ecommerce-management) and check that nothing (seed images, `.env.example`) is gitignored by mistake
 - ⬜ 10.4 Email the repo URL to career@csnbangladesh.com
 
 ---
