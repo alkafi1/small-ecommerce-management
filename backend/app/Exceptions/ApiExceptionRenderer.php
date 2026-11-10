@@ -28,7 +28,7 @@ class ApiExceptionRenderer
     /** Friendly names for models in "X not found." messages. */
     private const MODEL_LABELS = [
         'ShopProduct' => 'Listing',
-        'User' => 'User',
+        'User' => 'Shop owner',
     ];
 
     public function __invoke(Throwable $e, Request $request): ?JsonResponse
