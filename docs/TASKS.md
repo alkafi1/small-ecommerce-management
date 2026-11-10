@@ -98,7 +98,16 @@ Target schedule (deadline 11 Nov 2026):
 **2026-11-10/11:** Phases 0–9 code complete, Phase 10.1 README written.
 - Backend: 42 API routes (`php artisan route:list --path=api`), `php -l` + Pint clean.
 - Frontend: `tsc -b`, `oxlint` and `vite build` clean.
-- **Not verified yet:** migrations and seeders, plus every API call against a real DB. Local PHP has no SQLite driver and the MySQL credentials are not set in `backend/.env`. No browser check done.
+
+**2026-11-11:** DB verified on MySQL.
+- `migrate:fresh --seed` runs clean.
+- curl smoke test passed for:
+  - auth: wrong password, inactive account, 422 messages, login throttle (429 on the 6th attempt), logout
+  - storefront: inactive shop gives 404, hidden/inactive/unlisted products are not shown, the tee overrides show, a listing from another shop gives 404
+  - admin: owner/shop/product CRUD, multipart `_method=PUT`, deactivation signs the owner out, 409 on deleting an owner who has shops
+  - owner: other owner's shop gives 403, price 0 and duplicate listing give 422, override/remove_thumbnail (the file is deleted), 409 then success on product delete
+- Fix: a missing owner now says "Shop owner not found."
+- **Not verified yet:** browser UI (frontend type check, lint and build only), mobile layout, SQLite setup (no driver locally).
 
 ## How to check (manual)
 
