@@ -120,8 +120,6 @@ The seeded data includes these visibility cases, so you can check the customer r
 
 ## 6. Architecture
 
-Full details are in [`docs/PLAN.md`](docs/PLAN.md), and the task log is in [`docs/TASKS.md`](docs/TASKS.md).
-
 ### Backend
 ```
 Route → middleware (auth:sanctum, active, role, throttle)
