@@ -260,8 +260,8 @@ Note: file uploads go through `POST` with `_method=PUT` (multipart limitation), 
 - Seed thumbnails are committed in `database/seeders/images/` and copied to storage by the seeder (works offline)
 
 ### 4.9 Quality
-- Feature tests (PHPUnit) on the key rules: storefront hides unassigned products, owner cannot touch another owner's shop or product, delete conflict returns 409, validation envelope format. *(This needs your OK. See open decisions.)*
-- `pint` formatting, and API docs in `docs/API.md` plus an exported Postman collection.
+- No automated tests (D3). Manual check steps are in TASKS.md.
+- `pint` formatting. The API overview is in README §7.
 
 ---
 
@@ -358,7 +358,7 @@ CORS: `config/cors.php` allows `FRONTEND_URL` from `.env` (default `http://local
 |---|---|---|
 | D1 | Can one owner have several shops? | **Yes**. Owner UI has a shop switcher |
 | D2 | DB for the reviewer | **MySQL** documented first, SQLite as a one-line alternative |
-| D3 | Write feature tests? | **Yes, a small set (~10)**. It is a strong senior signal for an assessment |
+| D3 | Write feature tests? | **No.** Manual verification steps instead (user preference) |
 | D4 | Auth style | **Sanctum bearer tokens** (simpler than cookie SPA auth across ports) |
 | D5 | UI kit | **Tailwind + own components** (no shadcn CLI step for the reviewer) |
 | D6 | Stock / orders / cart | **Out of scope** (not in the PDF) |
